@@ -34,4 +34,4 @@ display one or the other through subtle changes to the file:
             that text of one message is displayed with a white color that blends into 
             the background, and text of the other message is displayed with a dark 
             color) which can then be altered to change the signed document's 
-            content.[4]
+            content.[4] (Hei vain!)
