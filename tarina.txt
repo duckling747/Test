@@ -1,4 +1,4 @@
-Mathematically stated, a collision attack finds two different messages m1 and m2, such 
+Mathematically stated, a (Hei maailma!) collision attack finds two different messages m1 and m2, such 
 that hash(m1) = hash(m2). In a classical collision attack, the attacker has no control 
 over the content of either message, but they are arbitrarily chosen by the algorithm.
 
