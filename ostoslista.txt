@@ -3,8 +3,8 @@ munat
 keksit
 piparit
 nuudelit
-lihat
 riisit
 leivät
 makkarat
 pähkinät
+linssit
