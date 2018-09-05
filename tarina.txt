@@ -1,0 +1,37 @@
+Mathematically stated, a collision attack finds two different messages m1 and m2, such 
+that hash(m1) = hash(m2). In a classical collision attack, the attacker has no control 
+over the content of either message, but they are arbitrarily chosen by the algorithm.
+
+Much like symmetric-key ciphers are vulnerable to brute force attacks, every 
+cryptographic hash function is inherently vulnerable to collisions using a birthday 
+attack. Due to the birthday problem, these attacks are much faster than a brute force 
+would be. A hash of n bits can be broken in 2n/2 time (evaluations of the hash 
+function).
+
+More efficient attacks are possible by employing cryptanalysis to specific hash 
+functions. When a collision attack is discovered and is found to be faster than a 
+birthday attack, a hash function is often denounced as "broken". The NIST hash function 
+competition was largely induced by published collision attacks against two very 
+commonly used hash functions, MD5[1] and SHA-1. The collision attacks against MD5 have 
+improved so much that, as of 2007, it takes just a few seconds on a regular 
+computer.[2] Hash collisions created this way are usually constant length and largely 
+unstructured, so cannot directly be applied to attack widespread document formats or 
+protocols.
+
+However, workarounds are possible by abusing dynamic constructs present in many 
+formats. In this way, two documents would be created which are as similar as possible 
+in order to have the same hash value. One document would be shown to an authority to be 
+signed, and then the signature could be copied to the other file. Such a malicious 
+document would contain two different messages in the same document, but conditionally 
+display one or the other through subtle changes to the file:
+
+    Some document formats like PostScript, or macros in Microsoft Word, have 
+    conditional constructs.[3][4] (if-then-else) that allow testing whether a location 
+    in the file has one value or another in order to control what is displayed.
+        TIFF files can contain cropped images, with a different part of an image being 
+        displayed without affecting the hash value.[4]
+            PDF files are vulnerable to collision attacks by using color value (such 
+            that text of one message is displayed with a white color that blends into 
+            the background, and text of the other message is displayed with a dark 
+            color) which can then be altered to change the signed document's 
+            content.[4]
